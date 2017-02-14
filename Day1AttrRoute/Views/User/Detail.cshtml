@@ -8,4 +8,14 @@
 
 <h1>@Model.UserName</h1>
 
-<h1>@Model.PasswordHash</h1>
+@if (ViewBag.isFriend)
+{
+    <h4>You are both currently friends</h4>
+}
+else
+{
+    using (Html.BeginForm())
+    {
+        <input type="submit" value="Add as a friend" class="btn btn-primary" />
+    }
+}

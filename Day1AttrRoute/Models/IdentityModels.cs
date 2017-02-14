@@ -29,5 +29,7 @@ namespace Day1AttrRoute.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Friend> Friends { get; set; }
     }
 }

@@ -21,11 +21,35 @@ namespace Day1AttrRoute.Controllers
             return View(userInstance);
         }
 
-        [Route("User/{username}")]
+        [Route("u/{username}")]
         public ActionResult Detail(string userName)
         {
-            var userInstance = db.Users.Where(u => u.UserName == userName).FirstOrDefault();
+            ApplicationUser userInstance = db.Users.Where(u => u.UserName == userName).FirstOrDefault();
+            string me = User.Identity.GetUserId();
+            string target = userInstance.Id;
+            bool isFriend = db.Friends
+                .Where(
+                    f => (f.RequestorId == me && f.TargetId == target) ||
+                         (f.TargetId == me && f.RequestorId == target)
+                ).Any();
+            ViewBag.isFriend = isFriend;
             return View(userInstance);
+        }
+
+        [HttpPost]
+        [Route("u/{username}")]
+        public ActionResult AddFriend(string userName)
+        {
+            var me = User.Identity.GetUserId();
+            string target = db.Users.Where(u => u.UserName == userName).FirstOrDefault();
+            Friend relationship = new Friend;
+            {
+                RequestorId = me,
+                TargetId = target
+            };
+            db.Friends.Add(relationship);
+            db.SaveChanges();
+            return RedirectToAction("Detail");
         }
     }
 }
