@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1AttrRoute", "Day1AttrRo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1Hash", "Day1Hash\Day1Hash.csproj", "{1E8E2B59-5BCD-4C95-91B3-65A2694B4A5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4Uploads", "Day4Uploads\Day4Uploads.csproj", "{ED732314-77E9-4BF7-8A78-F6F9ED6BCD99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1E8E2B59-5BCD-4C95-91B3-65A2694B4A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E8E2B59-5BCD-4C95-91B3-65A2694B4A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E8E2B59-5BCD-4C95-91B3-65A2694B4A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED732314-77E9-4BF7-8A78-F6F9ED6BCD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED732314-77E9-4BF7-8A78-F6F9ED6BCD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED732314-77E9-4BF7-8A78-F6F9ED6BCD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED732314-77E9-4BF7-8A78-F6F9ED6BCD99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

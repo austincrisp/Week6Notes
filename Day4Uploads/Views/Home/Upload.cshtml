@@ -1,0 +1,23 @@
+﻿@model Day4Uploads.Models.ImageUploadViewModel
+
+@{
+    ViewBag.Title = "Upload";
+}
+
+<div class="container">
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))<!-- must have enctype for this to work -->
+{
+    <br />
+    <br />
+    <br />
+    <p>
+        @Html.EditorFor(u => u.Caption, new { @class = "form-control" })
+    </p>
+    <p>
+        <input type="file" name="File" class="form-control" />
+    </p>
+    <p>
+        <input type="submit" value="Upload File" class="btn btn-warning" />
+    </p>
+}
+</div>
